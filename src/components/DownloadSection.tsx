@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 const driverDashboard = '/src/assets/ee4ea542a72c5e7a3f16b26a997fb91b75b80ee6.png';
 const customerApp = '/src/assets/bbae5cdf871a3be0f5c3e6e3c21091b6bb6fa76a.png';
 
-export default function DownloadSection() {
+export function DownloadSection() {
   return (
     <section id="app" className="py-24 bg-black relative overflow-hidden">
       {/* Luxury Background Elements */}

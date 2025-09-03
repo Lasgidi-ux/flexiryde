@@ -11,7 +11,7 @@ export default function NewsletterSection() {
   const [phone, setPhone] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     if (email && name) {
       setIsSubmitted(true);
@@ -91,10 +91,16 @@ export default function NewsletterSection() {
 
                 <div className="text-center">
                   <Button
-                    type="submit"
+                    type="button"
                     variant="luxury"
                     size="lg"
                     className="px-12 py-4 text-lg w-full md:w-auto"
+                    onClick={() => {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     Join the Waitlist
                   </Button>

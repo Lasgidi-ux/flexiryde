@@ -354,12 +354,12 @@ export default function ScreensShowcase() {
           {/* Enhanced Mobile Swipe Indicator with Visual Guidance */}
           <div className="block md:hidden text-center mt-6 px-4">
             <div className="inline-flex items-center justify-center space-x-3 bg-black/40 backdrop-blur-sm rounded-full px-6 py-3 border border-[var(--color-gold-primary)]/20">
-              <span className="text-2xl animate-bounce" style={{animationDelay: '0s'}}>👈</span>
-              <span className="text-gray-400 text-sm font-medium">Swipe or tap arrows</span>
-              <span className="text-2xl animate-bounce" style={{animationDelay: '1s'}}>👉</span>
+              <span className="text-2xl animate-bounce" style={{animationDelay: '0s'}}></span>
+              <span className="text-gray-400 text-sm font-medium"></span>
+              <span className="text-2xl animate-bounce" style={{animationDelay: '1s'}}></span>
             </div>
             <div className="mt-3 text-xs text-gray-500">
-              Touch-friendly navigation optimized for mobile
+              
             </div>
           </div>
         </div>

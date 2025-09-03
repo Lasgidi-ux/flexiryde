@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import { TrendingUp, Users, Target } from "lucide-react";
 
-export default function CrowdfundingSection() {
+export function CrowdfundingSection() {
   return (
     <section className="py-24 bg-gradient-to-br from-[var(--color-charcoal)] to-black relative overflow-hidden">
       {/* Background Decoration */}

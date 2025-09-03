@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://flexiryde.com/</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://flexiryde.com/src/assets/flexiryde%20logo.jpeg</image:loc>
+      <image:caption>FlexiRyde Premium Luxury Transportation Logo</image:caption>
+      <image:title>FlexiRyde - Africa's Premier Luxury Transport</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://flexiryde.com/src/assets/Mini%20FlexiRyde%20Logo%20Design%20(1).png</image:loc>
+      <image:caption>FlexiRyde Mini Logo Design</image:caption>
+      <image:title>FlexiRyde Brand Icon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Features Page -->
+  <url>
+    <loc>https://flexiryde.com/features</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- How It Works -->
+  <url>
+    <loc>https://flexiryde.com/how-it-works</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- App Screenshots -->
+  <url>
+    <loc>https://flexiryde.com/app-showcase</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://flexiryde.com/src/assets/Booking%20screen%202.PNG</image:loc>
+      <image:caption>FlexiRyde Booking Screen Interface</image:caption>
+      <image:title>Premium Ride Booking Experience</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://flexiryde.com/src/assets/Booking%20screen%203.PNG</image:loc>
+      <image:caption>FlexiRyde Vehicle Selection Screen</image:caption>
+      <image:title>Luxury Vehicle Options</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://flexiryde.com/src/assets/Booking%20screen%204.PNG</image:loc>
+      <image:caption>FlexiRyde Ride Confirmation Screen</image:caption>
+      <image:title>Seamless Booking Confirmation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://flexiryde.com/src/assets/Booking%20screen%205.PNG</image:loc>
+      <image:caption>FlexiRyde Trip Tracking Interface</image:caption>
+      <image:title>Real-time Ride Tracking</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://flexiryde.com/src/assets/Booking%20screen1.PNG</image:loc>
+      <image:caption>FlexiRyde Main Booking Dashboard</image:caption>
+      <image:title>Premium Transportation Dashboard</image:title>
+    </image:image>
+  </url>
+
+  <!-- Crowdfunding -->
+  <url>
+    <loc>https://flexiryde.com/crowdfunding</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Testimonials -->
+  <url>
+    <loc>https://flexiryde.com/testimonials</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Download App -->
+  <url>
+    <loc>https://flexiryde.com/download</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Newsletter -->
+  <url>
+    <loc>https://flexiryde.com/newsletter</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Service Pages -->
+  <url>
+    <loc>https://flexiryde.com/services/executive-cars</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/services/airport-transfer</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/services/event-transportation</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- City Pages -->
+  <url>
+    <loc>https://flexiryde.com/cities/lagos</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/cities/abuja</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/cities/accra</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/cities/nairobi</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Support Pages -->
+  <url>
+    <loc>https://flexiryde.com/support</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/faq</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/contact</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://flexiryde.com/privacy-policy</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/terms-of-service</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/cookie-policy</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Driver/Partner Pages -->
+  <url>
+    <loc>https://flexiryde.com/drive-with-us</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/fleet-owners</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Business Pages -->
+  <url>
+    <loc>https://flexiryde.com/business</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/corporate-accounts</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog/News Pages -->
+  <url>
+    <loc>https://flexiryde.com/blog</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/news</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- About Pages -->
+  <url>
+    <loc>https://flexiryde.com/about</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flexiryde.com/careers</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

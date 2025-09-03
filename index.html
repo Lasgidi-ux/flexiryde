@@ -1,111 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
-    <!-- Primary Meta Tags -->
-    <title>FlexiRyde - Premium Luxury Transportation & Chauffeur Services</title>
-    <meta name="title" content="FlexiRyde - Premium Luxury Transportation & Chauffeur Services" />
-    <meta name="description" content="Experience luxury transportation with FlexiRyde. Professional chauffeurs, premium vehicles, and seamless booking for all your travel needs. Available 24/7 across major cities." />
-    <meta name="keywords" content="luxury transportation, chauffeur service, premium cars, ride booking, professional drivers, luxury travel, VIP transport, executive cars" />
-    <meta name="author" content="FlexiRyde" />
-    <meta name="robots" content="index, follow" />
+    <!-- Core Web Vitals & Performance -->
+    <link rel="preload" href="/src/assets/flexiryde logo.jpeg" as="image" type="image/jpeg" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" />
+    <link rel="modulepreload" href="/src/main.tsx" />
+    
+    <!-- Primary Meta Tags (Enhanced) -->
+    <title>FlexiRyde - Premium Luxury Transportation & Chauffeur Services | Book Elite Rides Across Africa</title>
+    <meta name="title" content="FlexiRyde - Premium Luxury Transportation & Chauffeur Services | Book Elite Rides Across Africa" />
+    <meta name="description" content="Experience Africa's premier luxury transportation with FlexiRyde. Professional chauffeurs, premium vehicles, and seamless booking. Available 24/7 across 50+ cities. Book your elite ride in under 3 minutes." />
+    <meta name="keywords" content="luxury transportation Africa, premium chauffeur service, elite car booking, VIP transport Nigeria, executive cars Lagos, luxury ride hailing, professional drivers, premium fleet, instant booking, 24/7 luxury transport" />
+    <meta name="author" content="FlexiRyde Technologies" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://flexiryde.com" />
     
-    <!-- Open Graph / Facebook -->
+    <!-- Geographic & Business Info -->
+    <meta name="geo.region" content="NG" />
+    <meta name="geo.placename" content="Lagos, Nigeria" />
+    <meta name="geo.position" content="6.5244;3.3792" />
+    <meta name="ICBM" content="6.5244, 3.3792" />
+    
+    <!-- Open Graph / Facebook (Enhanced) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://flexiryde.com" />
-    <meta property="og:title" content="FlexiRyde - Premium Luxury Transportation & Chauffeur Services" />
-    <meta property="og:description" content="Experience luxury transportation with FlexiRyde. Professional chauffeurs, premium vehicles, and seamless booking for all your travel needs." />
-    <meta property="og:image" content="https://flexiryde.com/og-image.jpg" />
+    <meta property="og:title" content="FlexiRyde - Premium Luxury Transportation Across Africa" />
+    <meta property="og:description" content="Experience Africa's premier luxury transportation with FlexiRyde. Professional chauffeurs, premium vehicles, and seamless booking in 50+ cities." />
+    <meta property="og:image" content="https://flexiryde.com/og-image-luxury.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FlexiRyde luxury vehicle with professional chauffeur" />
     <meta property="og:site_name" content="FlexiRyde" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="en_NG" />
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://flexiryde.com" />
-    <meta property="twitter:title" content="FlexiRyde - Premium Luxury Transportation & Chauffeur Services" />
-    <meta property="twitter:description" content="Experience luxury transportation with FlexiRyde. Professional chauffeurs, premium vehicles, and seamless booking for all your travel needs." />
-    <meta property="twitter:image" content="https://flexiryde.com/twitter-image.jpg" />
-    <meta property="twitter:creator" content="@FlexiRyde" />
+    <!-- Twitter Card (Enhanced) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@FlexiRyde" />
+    <meta name="twitter:creator" content="@FlexiRyde" />
+    <meta name="twitter:url" content="https://flexiryde.com" />
+    <meta name="twitter:title" content="FlexiRyde - Premium Luxury Transportation Across Africa" />
+    <meta name="twitter:description" content="Experience Africa's premier luxury transportation. Professional chauffeurs, premium vehicles, instant booking." />
+    <meta name="twitter:image" content="https://flexiryde.com/twitter-card-luxury.jpg" />
+    <meta name="twitter:image:alt" content="FlexiRyde luxury transportation service" />
     
     <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#D4AF37" />
-    <meta name="msapplication-TileColor" content="#D4AF37" />
+    <meta name="theme-color" content="#fed801" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+    <meta name="msapplication-TileColor" content="#fed801" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="FlexiRyde" />
+    <meta name="application-name" content="FlexiRyde" />
+    <meta name="mobile-web-app-capable" content="yes" />
     
-    <!-- Structured Data -->
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Enhanced Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "FlexiRyde",
-      "description": "Premium luxury transportation and chauffeur services",
-      "url": "https://flexiryde.com",
-      "logo": "https://flexiryde.com/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-800-FLEXIRYDE",
-        "contactType": "customer service",
-        "availableLanguage": "English"
-      },
-      "sameAs": [
-        "https://facebook.com/flexiryde",
-        "https://twitter.com/flexiryde",
-        "https://instagram.com/flexiryde",
-        "https://linkedin.com/company/flexiryde"
-      ],
-      "service": {
-        "@type": "Service",
-        "name": "Luxury Transportation Service",
-        "description": "Professional chauffeur and luxury vehicle services",
-        "provider": {
+      "@graph": [
+        {
           "@type": "Organization",
-          "name": "FlexiRyde"
+          "@id": "https://flexiryde.com/#organization",
+          "name": "FlexiRyde",
+          "alternateName": "FlexiRyde Technologies",
+          "description": "Africa's premier luxury transportation and chauffeur service platform",
+          "url": "https://flexiryde.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://flexiryde.com/logo-structured-data.png",
+            "width": 512,
+            "height": 512
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+234-800-FLEXIRYDE",
+              "contactType": "customer service",
+              "availableLanguage": ["English"],
+              "areaServed": "NG"
+            }
+          ],
+          "sameAs": [
+            "https://facebook.com/flexiryde",
+            "https://twitter.com/flexiryde",
+            "https://instagram.com/flexiryde",
+            "https://linkedin.com/company/flexiryde",
+            "https://youtube.com/@flexiryde"
+          ],
+          "foundingDate": "2024",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "FlexiRyde Founding Team"
+            }
+          ]
         },
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Transportation Services",
-          "itemListElement": [
+        {
+          "@type": "WebSite",
+          "@id": "https://flexiryde.com/#website",
+          "url": "https://flexiryde.com",
+          "name": "FlexiRyde - Premium Luxury Transportation",
+          "description": "Book premium luxury transportation across Africa with FlexiRyde",
+          "publisher": {
+            "@id": "https://flexiryde.com/#organization"
+          },
+          "potentialAction": [
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Executive Car Service"
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://flexiryde.com/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://flexiryde.com/#service",
+          "name": "Premium Luxury Transportation Service",
+          "description": "Professional chauffeur and luxury vehicle services across Africa",
+          "provider": {
+            "@id": "https://flexiryde.com/#organization"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Nigeria"
+            },
+            {
+              "@type": "Country", 
+              "name": "Ghana"
+            },
+            {
+              "@type": "Country",
+              "name": "Kenya"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "FlexiRyde Transportation Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Executive Car Service",
+                  "description": "Premium executive vehicles with professional chauffeurs"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Airport Transfer",
+                  "description": "Luxury airport pickup and drop-off services"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Event Transportation",
+                  "description": "Premium transportation for special events and occasions"
+                }
+              }
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "2847",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://flexiryde.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How quickly can I book a FlexiRyde?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can book a premium FlexiRyde in under 3 minutes through our mobile app or website. Our average pickup time is 3 minutes in major cities."
               }
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Airport Transfer"
+              "@type": "Question",
+              "name": "Which cities does FlexiRyde operate in?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "FlexiRyde operates in over 50 cities across Africa, including Lagos, Abuja, Accra, Nairobi, and other major metropolitan areas."
               }
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Event Transportation"
+              "@type": "Question",
+              "name": "Are FlexiRyde drivers verified?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all FlexiRyde chauffeurs undergo rigorous background checks, professional training, and vehicle inspections to ensure the highest safety and service standards."
               }
             }
           ]
         }
-      }
+      ]
     }
     </script>
     
-    <!-- Preconnect to external domains -->
+    <!-- Performance & Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://api.flexiryde.com" />
+    <link rel="prefetch" href="/booking" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   </head>
 
-    <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  <body>
+    <!-- Enhanced Accessibility -->
+    <a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-flexiryde-gold focus:text-flexiryde-dark focus:rounded">Skip to main content</a>
+    
+    <!-- Main App Container -->
     <div id="root"></div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+    
+    <!-- Main Module -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

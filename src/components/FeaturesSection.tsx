@@ -26,7 +26,7 @@ const features = [
   }
 ];
 
-export default function FeaturesSection() {
+export function FeaturesSection() {
   return (
     <section className="py-24 bg-[var(--color-charcoal)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

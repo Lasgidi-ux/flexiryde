@@ -9,17 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-lg",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 shadow-sm hover:shadow-md",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60 hover:scale-105",
+          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60 hover:scale-105 shadow-sm hover:shadow-md",
         outline:
-          "border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 hover:scale-105 hover:shadow-md",
+          "border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 hover:scale-105 shadow-sm hover:shadow-md",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:scale-105",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:scale-105 shadow-sm hover:shadow-md",
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 hover:scale-105",
         link: "text-primary underline-offset-4 hover:underline hover:scale-105",
-        luxury: "gold-gradient text-black hover:opacity-90 hover:scale-105 hover:shadow-lg hover:shadow-[var(--color-flexiryde-gold)]/30 flexiryde-luxury-shadow animate-shimmer",
+        luxury: "gold-gradient text-black hover:opacity-90 hover:scale-105 shadow-gold-sm hover:shadow-gold-lg flexiryde-luxury-shadow animate-shimmer",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

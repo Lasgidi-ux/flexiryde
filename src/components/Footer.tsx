@@ -3,7 +3,7 @@
 import React from "react";
 import { Crown, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,15 +25,15 @@ export default function Footer() {
               {/* Contact Info */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-[var(--color-gold-primary)]" />
+                  <Mail className="w-5 h-5 text-[var(--color-flexiryde-gold)]" />
                   <span className="text-gray-300">info@flexiryde.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-[var(--color-gold-primary)]" />
+                  <Phone className="w-5 h-5 text-[var(--color-flexiryde-gold)]" />
                   <span className="text-gray-300">+234 915 759 9830</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-[var(--color-gold-primary)]" />
+                  <MapPin className="w-5 h-5 text-[var(--color-flexiryde-gold)]" />
                   <span className="text-gray-300">Lagos, Nigeria</span>
                 </div>
               </div>
@@ -44,27 +44,27 @@ export default function Footer() {
               <h3 className="text-xl text-white mb-6">Quick Links</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#home" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#home" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#how-it-works" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     How It Works
                   </a>
                 </li>
                 <li>
-                  <a href="#book-ride" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#book-ride" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     Book a Ride
                   </a>
                 </li>
                 <li>
-                  <a href="#list-car" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#list-car" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     List Your Car
                   </a>
                 </li>
                 <li>
-                  <a href="#app" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#app" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     Download App
                   </a>
                 </li>
@@ -76,27 +76,27 @@ export default function Footer() {
               <h3 className="text-xl text-white mb-6">Support</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#contact" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#contact" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#faq" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <a href="#help" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#help" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     Help Center
                   </a>
                 </li>
                 <li>
-                  <a href="#safety" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#safety" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     Safety
                   </a>
                 </li>
                 <li>
-                  <a href="#partner" className="text-gray-300 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+                  <a href="#partner" className="text-gray-300 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                     Partner with Us
                   </a>
                 </li>

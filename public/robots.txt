@@ -1,0 +1,73 @@
+# FlexiRyde Robots.txt - 2026 SEO Standards
+# https://flexiryde.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /.env
+Disallow: /config/
+Disallow: /logs/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?fbclid=*
+
+# Allow important assets
+Allow: /src/assets/
+Allow: /public/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block problematic bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://flexiryde.com/sitemap.xml
+Sitemap: https://flexiryde.com/sitemap-images.xml
+Sitemap: https://flexiryde.com/sitemap-news.xml
+
+# Host directive (preferred domain)
+Host: https://flexiryde.com
