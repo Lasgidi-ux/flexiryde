@@ -6,7 +6,11 @@ import { Menu, X, Sparkles } from "lucide-react";
 import LuxurySidebar from "./LuxurySidebar";
 import MagneticButton from "./ui/MagneticButton";
 
-export default function Navigation() {
+interface NavigationProps {
+  onSidebarOpen?: () => void;
+}
+
+export default function Navigation({ onSidebarOpen }: NavigationProps = {}) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);

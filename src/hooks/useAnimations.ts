@@ -148,5 +148,5 @@ export function useScrollPosition() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return scrollPosition;
+  return { scrollY: scrollPosition };
 }

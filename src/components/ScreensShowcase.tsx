@@ -34,8 +34,8 @@ const screens = [
 export default function ScreensShowcase() {
   const [currentScreen, setCurrentScreen] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const containerRef = useRef(null);
 
   // Minimum swipe distance (in px)
@@ -59,7 +59,7 @@ export default function ScreensShowcase() {
     }, 150);
   };
 
-  const goToScreen = (index) => {
+  const goToScreen = (index: number) => {
     if (isTransitioning || index === currentScreen) return;
     setIsTransitioning(true);
     setTimeout(() => {
@@ -69,12 +69,12 @@ export default function ScreensShowcase() {
   };
 
   // Touch handlers for swipe gestures
-  const onTouchStart = (e) => {
+  const onTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
-  const onTouchMove = (e) => {
+  const onTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
@@ -161,7 +161,10 @@ export default function ScreensShowcase() {
                             className="w-full h-full object-cover rounded-[2.5rem] sm:rounded-[3rem]"
                             onError={(e) => {
                               e.currentTarget.style.display = 'none';
-                              e.currentTarget.nextElementSibling.style.display = 'flex';
+                              const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                              if (nextElement) {
+                                nextElement.style.display = 'flex';
+                              }
                             }}
                           />
                           
@@ -234,7 +237,10 @@ export default function ScreensShowcase() {
                               className="w-full h-full object-cover rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem]"
                               onError={(e) => {
                                 e.currentTarget.style.display = 'none';
-                                e.currentTarget.nextElementSibling.style.display = 'flex';
+                                const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                                if (nextElement) {
+                                  nextElement.style.display = 'flex';
+                                }
                               }}
                             />
                             
