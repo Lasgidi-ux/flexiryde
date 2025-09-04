@@ -36,7 +36,7 @@ const navigationItems = [
 ];
 
 export default function LuxurySidebar({ isOpen, onToggle, activeSection, onSectionChange }: SidebarProps) {
-  const [hoveredItem, setHoveredItem] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -113,8 +113,8 @@ export default function LuxurySidebar({ isOpen, onToggle, activeSection, onSecti
             <div className="flex-shrink-0 p-6 pb-4 border-b border-yellow-400/10">
               {/* Header content stays here */}
               <div className="flex items-center justify-between relative">
-                {/* Unique Brand Section */}
                 <div className="flex flex-col space-y-1">
+                  <img src="/Mini FlexiRyde Logo Design (1).svg" alt="FlexiRyde Logo" className="w-12 h-12 rounded-lg filter brightness-110 hover:brightness-125 transition-all duration-300" />
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent">
                     FlexiRyde
                   </h1>

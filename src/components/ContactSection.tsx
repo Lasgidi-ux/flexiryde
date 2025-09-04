@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -25,12 +25,12 @@ export function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState("idle");
   const [hoverField, setHoverField] = useState<string | null>(null);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -53,7 +53,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 overflow-hidden bg-gradient-to-b from-[var(--color-flexiryde-dark-light)] to-[var(--color-flexiryde-dark)]">
+    <section id="contact" className="py-24 pt-16 bg-gradient-to-b from-[var(--color-flexiryde-dark)] to-[var(--color-flexiryde-dark-light)] relative overflow-hidden">
       {/* Luxury background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gold accent lines */}

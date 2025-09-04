@@ -80,9 +80,22 @@ export function HeroSection() {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center container-responsive">
-        {/* Floating UI Elements */}
+        {/* Floating UI Elements with Enhanced Glassmorphism */}
         <div className="absolute -top-20 -left-20 opacity-0 animate-slideInUp stagger-reveal" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
-          <div className="flexiryde-glass rounded-2xl p-4 floating-card animate-float3D luxury-hover-lift shadow-gold-sm">
+          <div className="luxury-card rounded-2xl p-4 floating-card animate-float3D shadow-gold-sm" style={{
+            background: 'rgba(255, 255, 255, 0.05)',
+            backdropFilter: 'blur(10px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(10px) saturate(180%)',
+            border: '1px solid rgba(254, 216, 1, 0.2)',
+            boxShadow: '0 8px 32px 0 rgba(254, 216, 1, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+          }} onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+            e.currentTarget.style.boxShadow = '0 12px 48px 0 rgba(254, 216, 1, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)';
+          }} onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0) scale(1)';
+            e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(254, 216, 1, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)';
+          }}>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-[var(--color-flexiryde-gold)]" aria-hidden="true" />
               <div>
@@ -94,7 +107,21 @@ export function HeroSection() {
         </div>
 
         <div className="absolute -top-10 -right-32 opacity-0 animate-slideInUp stagger-reveal" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
-          <div className="flexiryde-glass rounded-2xl p-4 floating-card animate-float3D luxury-hover-lift shadow-gold-sm" style={{ animationDelay: '2s' }}>
+          <div className="luxury-card rounded-2xl p-4 floating-card animate-float3D shadow-gold-sm" style={{
+            background: 'rgba(255, 255, 255, 0.05)',
+            backdropFilter: 'blur(10px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(10px) saturate(180%)',
+            border: '1px solid rgba(254, 216, 1, 0.2)',
+            boxShadow: '0 8px 32px 0 rgba(254, 216, 1, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            animationDelay: '2s'
+          }} onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+            e.currentTarget.style.boxShadow = '0 12px 48px 0 rgba(254, 216, 1, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)';
+          }} onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0) scale(1)';
+            e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(254, 216, 1, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)';
+          }}>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-[var(--color-flexiryde-gold)]" aria-hidden="true" />
               <div>
@@ -106,7 +133,21 @@ export function HeroSection() {
         </div>
 
         <div className="absolute -bottom-20 -left-32 opacity-0 animate-slideInUp stagger-reveal" style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}>
-          <div className="flexiryde-glass rounded-2xl p-4 floating-card animate-float3D luxury-hover-lift" style={{ animationDelay: '4s' }}>
+          <div className="luxury-card rounded-2xl p-4 floating-card animate-float3D" style={{
+            background: 'rgba(255, 255, 255, 0.05)',
+            backdropFilter: 'blur(10px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(10px) saturate(180%)',
+            border: '1px solid rgba(254, 216, 1, 0.2)',
+            boxShadow: '0 8px 32px 0 rgba(254, 216, 1, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            animationDelay: '4s'
+          }} onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+            e.currentTarget.style.boxShadow = '0 12px 48px 0 rgba(254, 216, 1, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.15)';
+          }} onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0) scale(1)';
+            e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(254, 216, 1, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)';
+          }}>
             <div className="flex items-center space-x-2">
               <Shield className="w-5 h-5 text-flexiryde-gold" aria-hidden="true" />
               <div>
@@ -132,20 +173,42 @@ export function HeroSection() {
 
           {/* Main Headline with Enhanced Typography Hierarchy */}
           <div className="space-y-4 mb-12 stagger-reveal">
-            <h1 id="hero-heading" className="text-display opacity-0 animate-slideInUp" style={{ fontSize: 'var(--text-8xl)', animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <h1 id="hero-heading" className="text-display opacity-0 animate-slideInUp" style={{ 
+              fontSize: 'var(--text-8xl)', 
+              animationDelay: '0.4s', 
+              animationFillMode: 'forwards',
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
+              letterSpacing: '0.02em'
+            }}>
               <span className="block flexiryde-kinetic-text">Redefining</span>
             </h1>
-            <h1 className="text-display opacity-0 animate-slideInUp" style={{ fontSize: 'var(--text-7xl)', animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+            <h1 className="text-display opacity-0 animate-slideInUp" style={{ 
+              fontSize: 'var(--text-7xl)', 
+              animationDelay: '0.6s', 
+              animationFillMode: 'forwards',
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
+              letterSpacing: '0.02em'
+            }}>
               <span className="block text-flexiryde-light">Luxury</span>
             </h1>
             <div className="flex items-center justify-center space-x-6 opacity-0 animate-slideInUp" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               <div className="w-24 h-1 flexiryde-gold-gradient rounded-full" aria-hidden="true"></div>
-              <h1 className="text-headline" style={{ fontSize: 'var(--text-6xl)' }}>
+              <h1 className="text-headline" style={{ 
+                fontSize: 'var(--text-6xl)',
+                textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
+                letterSpacing: '0.02em'
+              }}>
                 <span className="text-flexiryde-champagne">Mobility</span>
               </h1>
               <div className="w-24 h-1 flexiryde-gold-gradient rounded-full" aria-hidden="true"></div>
             </div>
-            <p className="text-luxury opacity-0 animate-slideInUp" style={{ fontSize: 'var(--text-3xl)', animationDelay: '1s', animationFillMode: 'forwards' }}>
+            <p className="text-luxury opacity-0 animate-slideInUp" style={{ 
+              fontSize: 'var(--text-3xl)', 
+              animationDelay: '1s', 
+              animationFillMode: 'forwards',
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
+              letterSpacing: '0.02em'
+            }}>
               <span className="text-flexiryde-gray">Across Africa</span>
             </p>
           </div>
@@ -172,9 +235,19 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons with Ripple Effect */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 opacity-0 animate-slideInUp" style={{ animationDelay: '1.8s', animationFillMode: 'forwards' }}>
-            <Button className="neo-brutalism text-flexiryde-dark hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_var(--color-flexiryde-dark)] transition-all duration-300 px-12 py-6 text-lg group magnetic-button touch-target focus-luxury">
+            <Button className="cta-button neo-brutalism text-flexiryde-dark hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_var(--color-flexiryde-dark)] transition-all duration-300 px-12 py-6 text-lg group magnetic-button touch-target focus-luxury relative overflow-hidden" 
+              onMouseDown={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                ripple.style.cssText = `position: absolute; width: ${size}px; height: ${size}px; left: ${x}px; top: ${y}px; background: rgba(255, 255, 255, 0.5); border-radius: 50%; transform: scale(0); animation: ripple 0.6s linear; pointer-events: none;`;
+                e.currentTarget.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+              }}>
               <Zap className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300" aria-hidden="true" />
               Book Elite Ride
               <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true" />
@@ -182,7 +255,17 @@ export function HeroSection() {
             
             <Button 
               variant="outline" 
-              className="border-2 border-flexiryde-champagne text-flexiryde-champagne hover:bg-flexiryde-champagne hover:text-flexiryde-dark transition-all duration-500 px-12 py-6 text-lg flexiryde-glass hover:scale-105 magnetic-button touch-target focus-luxury"
+              className="cta-button border-2 border-flexiryde-champagne text-flexiryde-champagne hover:bg-flexiryde-champagne hover:text-flexiryde-dark transition-all duration-500 px-12 py-6 text-lg flexiryde-glass hover:scale-105 magnetic-button touch-target focus-luxury relative overflow-hidden"
+              onMouseDown={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                ripple.style.cssText = `position: absolute; width: ${size}px; height: ${size}px; left: ${x}px; top: ${y}px; background: rgba(255, 255, 255, 0.5); border-radius: 50%; transform: scale(0); animation: ripple 0.6s linear; pointer-events: none;`;
+                e.currentTarget.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+              }}
             >
               <Crown className="w-6 h-6 mr-3" aria-hidden="true" />
               List Your Vehicle

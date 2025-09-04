@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Crown, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -12,11 +12,17 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center">
-                  <Crown className="w-6 h-6 text-black" />
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="flex flex-col space-y-1">
+                  <img src="/Mini FlexiRyde Logo Design (1).svg" alt="FlexiRyde Logo" className="w-12 h-12 rounded-lg filter brightness-110 hover:brightness-125 transition-all duration-300" />
+                  <h2 className="text-2xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent">
+                    FlexiRyde
+                  </h2>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
+                    <p className="text-xs text-[var(--color-flexiryde-gold-light)]/80 font-medium tracking-wider uppercase">Luxury Experience</p>
+                  </div>
                 </div>
-                <span className="text-3xl font-serif gold-text-gradient">FlexiRyde</span>
               </div>
               <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
                 Redefining luxury mobility across Africa with premium ride-hailing and car listing services for discerning clients.
@@ -116,33 +122,33 @@ export function Footer() {
                   href="https://facebook.com/flexiryde"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-gold-primary)]/20 transition-colors duration-300"
+                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-flexiryde-gold)]/20 transition-colors duration-300"
                 >
-                  <Facebook className="w-5 h-5 text-[var(--color-gold-primary)]" />
+                  <Facebook className="w-5 h-5 text-[var(--color-flexiryde-gold)]" />
                 </a>
                 <a
                   href="https://twitter.com/flexiryde"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-gold-primary)]/20 transition-colors duration-300"
+                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-flexiryde-gold)]/20 transition-colors duration-300"
                 >
-                  <Twitter className="w-5 h-5 text-[var(--color-gold-primary)]" />
+                  <Twitter className="w-5 h-5 text-[var(--color-flexiryde-gold)]" />
                 </a>
                 <a
                   href="https://instagram.com/flexiryde"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-gold-primary)]/20 transition-colors duration-300"
+                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-flexiryde-gold)]/20 transition-colors duration-300"
                 >
-                  <Instagram className="w-5 h-5 text-[var(--color-gold-primary)]" />
+                  <Instagram className="w-5 h-5 text-[var(--color-flexiryde-gold)]" />
                 </a>
                 <a
                   href="https://linkedin.com/company/flexiryde"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-gold-primary)]/20 transition-colors duration-300"
+                  className="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-[var(--color-flexiryde-gold)]/20 transition-colors duration-300"
                 >
-                  <Linkedin className="w-5 h-5 text-[var(--color-gold-primary)]" />
+                  <Linkedin className="w-5 h-5 text-[var(--color-flexiryde-gold)]" />
                 </a>
               </div>
             </div>
@@ -162,13 +168,13 @@ export function Footer() {
               © 2025 FlexiRyde Technologies Limited. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#privacy" className="text-gray-400 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+              <a href="#privacy" className="text-gray-400 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#terms" className="text-gray-400 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+              <a href="#terms" className="text-gray-400 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                 Terms of Service
               </a>
-              <a href="#cookies" className="text-gray-400 hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+              <a href="#cookies" className="text-gray-400 hover:text-[var(--color-flexiryde-gold)] transition-colors duration-300">
                 Cookie Policy
               </a>
             </div>

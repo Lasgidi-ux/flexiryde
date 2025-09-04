@@ -14,7 +14,7 @@ export default function Navigation() {
 
   // Handle mouse movement for magnetic effects
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
@@ -49,7 +49,7 @@ export default function Navigation() {
   }, []);
 
   // Smooth scroll function
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const targetId = sectionId === 'home' ? 'hero' : sectionId;
     const element = document.getElementById(targetId);
     if (element) {
@@ -68,9 +68,15 @@ export default function Navigation() {
     return (
       <button
         onClick={() => scrollToSection(href.replace('#', ''))}
-        className={`relative text-white/85 hover:text-[var(--color-flexiryde-gold)] transition-all duration-500 group font-medium text-sm tracking-wide p-3 rounded-2xl hover:bg-[var(--color-flexiryde-gold-light)]/10 backdrop-blur-sm border border-transparent hover:border-[var(--color-flexiryde-gold)]/20 ${className} ${
+        className={`nav-link relative text-white/85 hover:text-[var(--color-flexiryde-gold)] transition-all duration-300 group font-medium text-sm tracking-wide rounded-2xl border border-transparent ${className} ${
           isActive ? 'text-[var(--color-flexiryde-gold)] bg-[var(--color-flexiryde-gold)]/12 border-[var(--color-flexiryde-gold)]/30 shadow-inner' : ''
         }`}
+        style={{
+          position: 'relative',
+          padding: '0.75rem 1.25rem',
+          borderRadius: '1rem',
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+        }}
       >
         <span className="relative z-10 transition-all duration-300 group-hover:tracking-wider">{children}</span>
         
@@ -105,11 +111,30 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-700 ${
-        isScrolled 
-          ? 'bg-gradient-to-r from-[var(--color-flexiryde-dark)]/95 via-[var(--color-flexiryde-dark)]/98 to-[var(--color-flexiryde-dark)]/95 backdrop-blur-3xl shadow-xl border-b border-[var(--color-flexiryde-gold)]/30' 
-          : 'bg-gradient-to-r from-[var(--color-flexiryde-dark)]/60 via-[var(--color-flexiryde-dark)]/70 to-[var(--color-flexiryde-dark)]/60 backdrop-blur-2xl'
-      }`}>
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-700 ${
+          isScrolled 
+            ? 'backdrop-blur-3xl shadow-xl border-b border-[var(--color-flexiryde-gold)]/30' 
+            : 'backdrop-blur-2xl'
+        }`}
+        style={{
+          background: isScrolled 
+            ? `linear-gradient(
+                to right,
+                rgba(18, 18, 18, 0.92),
+                rgba(18, 18, 18, 0.95),
+                rgba(18, 18, 18, 0.92)
+              ),
+              url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fed801' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            : `linear-gradient(
+                to right,
+                rgba(18, 18, 18, 0.60),
+                rgba(18, 18, 18, 0.70),
+                rgba(18, 18, 18, 0.60)
+              ),
+              url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fed801' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}
+      >
         {/* Premium navigation glow effect */}
         <div className={`absolute inset-0 bg-gradient-to-r from-[var(--color-flexiryde-gold)]/5 via-transparent to-[var(--color-flexiryde-gold)]/5 opacity-0 transition-opacity duration-700 ${
           isScrolled ? 'opacity-100' : ''
@@ -123,49 +148,20 @@ export default function Navigation() {
             {/* Enhanced Logo Section */}
             <button 
               onClick={() => scrollToSection('home')}
-              className="flex items-center space-x-4 group transition-all duration-500 hover:scale-105 relative"
+              className="flex items-center group transition-all duration-500 hover:scale-105 relative"
             >
-              {/* Enhanced Logo - Larger, More Visible */}
-              <div className="relative w-16 h-16 group-hover:scale-105 transition-all duration-500">
-                {/* Logo image - full size, no container constraints */}
-                <img 
-                  src="/Mini%20FlexiRyde%20Logo%20Design%20(1).svg" 
-                  alt="FlexiRyde Logo" 
-                  className="w-full h-full object-contain filter brightness-110 contrast-110 group-hover:brightness-125 group-hover:contrast-125 transition-all duration-500"
-                  onError={(e) => {
-                    // Create elegant fallback with luxury design
-                    const target = e.currentTarget;
-                    target.style.display = 'none';
-                    
-                    const fallback = document.createElement('div');
-                    fallback.className = 'w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--color-flexiryde-gold)] to-[var(--color-flexiryde-gold-dark)] rounded-xl text-black font-bold text-2xl shadow-inner';
-                    fallback.innerHTML = 'F<sub class="text-sm">R</sub>';
-                    
-                    target.parentNode.appendChild(fallback);
-                  }}
-                />
-                
-                {/* Subtle glow on hover */}
-                <div className="absolute inset-0 bg-[var(--color-flexiryde-gold)]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="flex items-center justify-between relative">
+                <div className="flex flex-col space-y-1">
+                  <img src="/Mini FlexiRyde Logo Design (1).svg" alt="FlexiRyde Logo" className="w-12 h-12 rounded-lg filter brightness-110 hover:brightness-125 transition-all duration-300" />
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent">
+                    FlexiRyde
+                  </h1>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
+                    <p className="text-xs text-[var(--color-flexiryde-gold-light)]/80 font-medium tracking-wider uppercase">Luxury Experience</p>
+                  </div>
+                </div>
               </div>
-
-            {/* Enhanced Brand Text with Luxury Typography */}
-            <div className="hidden sm:block ml-4">
-              <div className="relative group-hover:translate-x-1 transition-transform duration-500">
-                <h1 className="text-2xl font-serif font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent group-hover:from-[var(--color-flexiryde-gold-light)] group-hover:via-[var(--color-flexiryde-champagne)] group-hover:to-[var(--color-flexiryde-gold-light)] transition-all duration-500 drop-shadow-sm">
-                  FlexiRyde
-                </h1>
-                <p className="text-xs text-[var(--color-flexiryde-gold-light)]/70 -mt-1 font-medium tracking-[0.15em] uppercase group-hover:text-[var(--color-flexiryde-gold-light)]/90 group-hover:tracking-[0.2em] transition-all duration-500">
-                  Luxury Transport
-                </p>
-                
-                {/* Premium accent line */}
-                <div className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-transparent group-hover:w-full transition-all duration-700 ease-out" />
-                
-                {/* Floating micro-particle */}
-                <div className="absolute -top-1 -right-2 w-1 h-1 bg-[var(--color-flexiryde-gold-light)]/60 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-500" />
-              </div>
-            </div>
             </button>
 
             {/* Enhanced Desktop Navigation */}
@@ -237,10 +233,15 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Navigation bottom border animation */}
-        <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent transition-all duration-1000 ${
-          isScrolled ? 'w-full opacity-100' : 'w-0 opacity-0'
-        }`} />
+        {/* Enhanced scroll progress indicator */}
+        <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gray-800/50 transition-all duration-1000 ${
+          isScrolled ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <div 
+            className="h-full bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-[var(--color-flexiryde-champagne)] transition-all duration-300"
+            style={{ width: `${Math.min(100, (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100)}%` }}
+          />
+        </div>
       </nav>
 
       {/* Luxury Sidebar */}

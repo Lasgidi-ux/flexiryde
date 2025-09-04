@@ -9,7 +9,7 @@ import VideoSection from "./components/VideoSection";
 import { HowItWorksSection } from "./components/HowItWorksSection";
 import ScreensShowcase from "./components/ScreensShowcase";
 import { CrowdfundingSection } from "./components/CrowdfundingSection";
-import TestimonialSection from "./components/TestimonialSection";
+import EnhancedTestimonialSection from "./components/TestimonialSection";
 import { ContactSection } from "./components/ContactSection";
 import { DownloadSection } from "./components/DownloadSection";
 import NewsletterSection from "./components/NewsletterSection";
@@ -79,7 +79,7 @@ export default function App() {
 
                 {/* Customer Testimonials */}
                 <section aria-labelledby="testimonials-heading">
-                  <TestimonialSection />
+                  <EnhancedTestimonialSection />
                 </section>
 
                 {/* Contact Section */}
