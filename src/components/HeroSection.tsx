@@ -13,6 +13,7 @@ import {
   Shield
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import flexiRydeLogo from "../assets/Mini FlexiRyde Logo Design (1).svg";
 
 export function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -68,12 +69,13 @@ export function HeroSection() {
           style={parallaxStyle}
         >
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=2070"
+            src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=2070&auto=format&fit=crop"
             alt="Luxury FlexiRyde vehicle showcasing premium transportation services"
             className="w-full h-full object-cover opacity-20 scale-110"
             loading="eager"
             decoding="async"
             fetchPriority="high"
+            sizes="100vw"
           />
         </div>
       </div>
@@ -172,9 +174,8 @@ export function HeroSection() {
           </div>
 
           {/* Main Headline with Enhanced Typography Hierarchy */}
-          <div className="space-y-4 mb-12 stagger-reveal">
-            <h1 id="hero-heading" className="text-display opacity-0 animate-slideInUp" style={{ 
-              fontSize: 'var(--text-8xl)', 
+          <div className="space-y-4 mb-8 sm:mb-12 stagger-reveal">
+            <h1 id="hero-heading" className="text-display opacity-0 animate-slideInUp text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl" style={{ 
               animationDelay: '0.4s', 
               animationFillMode: 'forwards',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
@@ -182,8 +183,7 @@ export function HeroSection() {
             }}>
               <span className="block flexiryde-kinetic-text">Redefining</span>
             </h1>
-            <h1 className="text-display opacity-0 animate-slideInUp" style={{ 
-              fontSize: 'var(--text-7xl)', 
+            <h1 className="text-display opacity-0 animate-slideInUp text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{ 
               animationDelay: '0.6s', 
               animationFillMode: 'forwards',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
@@ -191,19 +191,17 @@ export function HeroSection() {
             }}>
               <span className="block text-flexiryde-light">Luxury</span>
             </h1>
-            <div className="flex items-center justify-center space-x-6 opacity-0 animate-slideInUp" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
-              <div className="w-24 h-1 flexiryde-gold-gradient rounded-full" aria-hidden="true"></div>
-              <h1 className="text-headline" style={{ 
-                fontSize: 'var(--text-6xl)',
+            <div className="flex items-center justify-center space-x-3 sm:space-x-6 opacity-0 animate-slideInUp" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
+              <div className="w-12 sm:w-16 md:w-24 h-1 flexiryde-gold-gradient rounded-full" aria-hidden="true"></div>
+              <h1 className="text-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl" style={{ 
                 textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
                 letterSpacing: '0.02em'
               }}>
                 <span className="text-flexiryde-champagne">Mobility</span>
               </h1>
-              <div className="w-24 h-1 flexiryde-gold-gradient rounded-full" aria-hidden="true"></div>
+              <div className="w-12 sm:w-16 md:w-24 h-1 flexiryde-gold-gradient rounded-full" aria-hidden="true"></div>
             </div>
-            <p className="text-luxury opacity-0 animate-slideInUp" style={{ 
-              fontSize: 'var(--text-3xl)', 
+            <p className="text-luxury opacity-0 animate-slideInUp text-lg sm:text-xl md:text-2xl lg:text-3xl" style={{ 
               animationDelay: '1s', 
               animationFillMode: 'forwards',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3)',
@@ -235,9 +233,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* CTA Buttons with Ripple Effect */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 opacity-0 animate-slideInUp" style={{ animationDelay: '1.8s', animationFillMode: 'forwards' }}>
-            <Button className="cta-button neo-brutalism text-flexiryde-dark hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_var(--color-flexiryde-dark)] transition-all duration-300 px-12 py-6 text-lg group magnetic-button touch-target focus-luxury relative overflow-hidden" 
+          {/* CTA Buttons with Ripple Effect - Responsive */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 sm:mb-16 opacity-0 animate-slideInUp px-4" style={{ animationDelay: '1.8s', animationFillMode: 'forwards' }}>
+            <Button className="cta-button neo-brutalism text-flexiryde-dark hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_var(--color-flexiryde-dark)] transition-all duration-300 px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg group magnetic-button touch-target focus-luxury relative overflow-hidden w-full sm:w-auto" 
               onMouseDown={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const ripple = document.createElement('span');
@@ -255,7 +253,7 @@ export function HeroSection() {
             
             <Button 
               variant="outline" 
-              className="cta-button border-2 border-flexiryde-champagne text-flexiryde-champagne hover:bg-flexiryde-champagne hover:text-flexiryde-dark transition-all duration-500 px-12 py-6 text-lg flexiryde-glass hover:scale-105 magnetic-button touch-target focus-luxury relative overflow-hidden"
+              className="cta-button border-2 border-flexiryde-champagne text-flexiryde-champagne hover:bg-flexiryde-champagne hover:text-flexiryde-dark transition-all duration-500 px-8 sm:px-12 py-4 sm:py-6 text-base sm:text-lg flexiryde-glass hover:scale-105 magnetic-button touch-target focus-luxury relative overflow-hidden w-full sm:w-auto"
               onMouseDown={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const ripple = document.createElement('span');
@@ -289,7 +287,7 @@ export function HeroSection() {
                   <div className="text-center mb-6">
                     <div className="w-12 h-12 rounded-xl mx-auto mb-4 overflow-hidden">
                       <img 
-                        src="/src/assets/flexiryde logo.jpeg" 
+                        src={flexiRydeLogo} 
                         alt="FlexiRyde mobile application logo" 
                         className="w-full h-full object-cover"
                         loading="lazy"

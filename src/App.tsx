@@ -1,22 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import { HeroSection } from "./components/HeroSection";
-import { FeaturesSection } from "./components/FeaturesSection";
-import VideoSection from "./components/VideoSection";
-import { HowItWorksSection } from "./components/HowItWorksSection";
-import ScreensShowcase from "./components/ScreensShowcase";
-import { CrowdfundingSection } from "./components/CrowdfundingSection";
-import EnhancedTestimonialSection from "./components/TestimonialSection";
-import { ContactSection } from "./components/ContactSection";
-import { DownloadSection } from "./components/DownloadSection";
-import NewsletterSection from "./components/NewsletterSection";
-import { Footer } from "./components/Footer";
 import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import LuxurySidebar from "./components/LuxurySidebar";
-import { Button } from "./components/ui/button";
+
+// Lazy load non-critical components
+const FeaturesSection = lazy(() => import("./components/FeaturesSection").then(module => ({ default: module.FeaturesSection })));
+const VideoSection = lazy(() => import("./components/VideoSection"));
+const HowItWorksSection = lazy(() => import("./components/HowItWorksSection").then(module => ({ default: module.HowItWorksSection })));
+const ScreensShowcase = lazy(() => import("./components/ScreensShowcase"));
+const CrowdfundingSection = lazy(() => import("./components/CrowdfundingSection").then(module => ({ default: module.CrowdfundingSection })));
+const EnhancedTestimonialSection = lazy(() => import("./components/TestimonialSection"));
+const ContactSection = lazy(() => import("./components/ContactSection").then(module => ({ default: module.ContactSection })));
+const DownloadSection = lazy(() => import("./components/DownloadSection").then(module => ({ default: module.DownloadSection })));
+const NewsletterSection = lazy(() => import("./components/NewsletterSection"));
+const Footer = lazy(() => import("./components/Footer").then(module => ({ default: module.Footer })));
+
+// Loading component for better UX
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center py-12">
+    <div className="w-8 h-8 border-2 border-flexiryde-gold border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 
 export default function App() {
@@ -54,53 +62,73 @@ export default function App() {
 
                 {/* Features Section */}
                 <section aria-labelledby="features-heading">
-                  <FeaturesSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <FeaturesSection />
+                  </Suspense>
                 </section>
 
                 {/* Video Walkthrough */}
                 <section aria-labelledby="video-heading">
-                  <VideoSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <VideoSection />
+                  </Suspense>
                 </section>
 
                 {/* How It Works Process */}
                 <section aria-labelledby="process-heading">
-                  <HowItWorksSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <HowItWorksSection />
+                  </Suspense>
                 </section>
 
                 {/* App Screenshots */}
                 <section aria-labelledby="screenshots-heading">
-                  <ScreensShowcase />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <ScreensShowcase />
+                  </Suspense>
                 </section>
 
                 {/* Crowdfunding Call-to-Action */}
                 <section aria-labelledby="crowdfunding-heading">
-                  <CrowdfundingSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <CrowdfundingSection />
+                  </Suspense>
                 </section>
 
                 {/* Customer Testimonials */}
                 <section aria-labelledby="testimonials-heading">
-                  <EnhancedTestimonialSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <EnhancedTestimonialSection />
+                  </Suspense>
                 </section>
 
                 {/* Contact Section */}
                 <section aria-labelledby="contact-heading">
-                  <ContactSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <ContactSection />
+                  </Suspense>
                 </section>
 
                 {/* App Download */}
                 <section aria-labelledby="download-heading">
-                  <DownloadSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <DownloadSection />
+                  </Suspense>
                 </section>
 
                 {/* Newsletter Subscription */}
                 <section aria-labelledby="newsletter-heading">
-                  <NewsletterSection />
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <NewsletterSection />
+                  </Suspense>
                 </section>
               </main>
 
               {/* Footer */}
               <footer role="contentinfo">
-                <Footer />
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Footer />
+                </Suspense>
               </footer>
             </>
           } /></Routes>

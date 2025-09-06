@@ -327,25 +327,34 @@
     background-clip: text;
   }
   
-  /* Enhanced Glass Effects with FlexiRyde Branding */
+  /* Enhanced Glass Effects with FlexiRyde Branding - Cross-browser support */
   .glass-effect {
     background: rgba(245, 232, 199, 0.05);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Fallback for browsers without backdrop-filter */
+    background-color: rgba(245, 232, 199, 0.1);
   }
   
   .glass-morphism {
     background: rgba(245, 232, 199, 0.08);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(254, 216, 1, 0.15);
     box-shadow: 0 8px 32px rgba(18, 18, 18, 0.3);
+    /* Fallback for browsers without backdrop-filter */
+    background-color: rgba(245, 232, 199, 0.15);
   }
   
   .flexiryde-glass {
     background: rgba(254, 216, 1, 0.05);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(245, 232, 199, 0.2);
     box-shadow: 0 8px 24px rgba(254, 216, 1, 0.1);
+    /* Fallback for browsers without backdrop-filter */
+    background-color: rgba(254, 216, 1, 0.1);
   }
   
   .neo-brutalism {
@@ -1601,13 +1610,29 @@ body {
   }
 }
 
-/* Enhanced Container Responsive */
+/* Enhanced Container Responsive - Cross-browser support */
 .container-responsive {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  /* IE11 fallback */
+  max-width: 1200px;
+}
+
+/* CSS Grid fallbacks for older browsers */
+@supports not (display: grid) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid > * {
+    flex: 1;
+    min-width: 250px;
+    margin: 0.5rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1816,21 +1841,43 @@ body {
   }
 }
 
-/* Reduced Motion Support */
+/* Reduced Motion Support - Enhanced */
 @media (prefers-reduced-motion: reduce) {
   .animate-float3D,
   .animate-morphing,
   .animate-shimmer,
-  .animate-particles {
-    animation: none;
+  .animate-particles,
+  .animate-slideInUp,
+  .animate-slideInRight,
+  .animate-slideInLeft,
+  .animate-scaleIn,
+  .animate-fade-in-up,
+  .animate-fade-in-left,
+  .animate-fade-in-right,
+  .animate-luxury-rotate,
+  .animate-breathe,
+  .animate-flexiryde-glow,
+  .animate-luxury-pulse,
+  .animate-bounce,
+  .animate-pulse,
+  .animate-ping {
+    animation: none !important;
   }
   
-  .luxury-hover-lift {
-    transition: none;
+  .luxury-hover-lift,
+  .magnetic-button,
+  .nav-link,
+  .luxury-card,
+  .luxury-button,
+  .card-3d,
+  .floating-card {
+    transition: none !important;
+    transform: none !important;
   }
   
-  .magnetic-button {
-    transition: none;
+  /* Maintain opacity for visibility */
+  .opacity-0 {
+    opacity: 1 !important;
   }
 }
 
