@@ -69,10 +69,11 @@ export default function Navigation({ onSidebarOpen }: NavigationProps = {}) {
   // Enhanced Navigation link with premium interactions
   const NavLink = ({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) => {
     const isActive = activeSection === href.replace('#', '');
+    const sectionId = href.replace('#', '');
     return (
       <button
-        onClick={() => scrollToSection(href.replace('#', ''))}
-        className={`nav-link relative text-white/85 hover:text-[var(--color-flexiryde-gold)] transition-all duration-300 group font-medium text-sm tracking-wide rounded-2xl border border-transparent ${className} ${
+        onClick={() => scrollToSection(sectionId)}
+        className={`nav-link relative text-white/85 hover:text-[var(--color-flexiryde-gold)] transition-all duration-300 group font-medium text-sm tracking-wide rounded-2xl border border-transparent focus-visible-luxury ${className} ${
           isActive ? 'text-[var(--color-flexiryde-gold)] bg-[var(--color-flexiryde-gold)]/12 border-[var(--color-flexiryde-gold)]/30 shadow-inner' : ''
         }`}
         style={{
@@ -81,6 +82,9 @@ export default function Navigation({ onSidebarOpen }: NavigationProps = {}) {
           borderRadius: '1rem',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
         }}
+        aria-label={`Navigate to ${children} section`}
+        aria-current={isActive ? 'page' : undefined}
+        role="navigation"
       >
         <span className="relative z-10 transition-all duration-300 group-hover:tracking-wider">{children}</span>
         
@@ -149,19 +153,19 @@ export default function Navigation({ onSidebarOpen }: NavigationProps = {}) {
             isScrolled ? 'h-16' : 'h-20'
           }`}>
             
-            {/* Enhanced Logo Section */}
+            {/* Enhanced Logo Section - Responsive */}
             <button 
               onClick={() => scrollToSection('home')}
               className="flex items-center group transition-all duration-500 hover:scale-105 relative"
             >
               <div className="flex items-center justify-between relative">
                 <div className="flex flex-col space-y-1">
-                  <img src="/Mini FlexiRyde Logo Design (1).svg" alt="FlexiRyde Logo" className="w-12 h-12 rounded-lg filter brightness-110 hover:brightness-125 transition-all duration-300" />
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent">
+                  <img src="/Mini FlexiRyde Logo Design (1).svg" alt="FlexiRyde Logo" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg filter brightness-110 hover:brightness-125 transition-all duration-300" />
+                  <h1 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent">
                     FlexiRyde
                   </h1>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
+                  <div className="hidden sm:flex items-center space-x-2">
+                    <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
                     <p className="text-xs text-[var(--color-flexiryde-gold-light)]/80 font-medium tracking-wider uppercase">Luxury Experience</p>
                   </div>
                 </div>

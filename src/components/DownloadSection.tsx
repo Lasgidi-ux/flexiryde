@@ -4,8 +4,11 @@ import React from "react";
 import { Smartphone, Apple, PlayCircle } from "lucide-react";
 import { Button } from "./ui/button";
 // Import images using public path for better compatibility
-const driverDashboard = '/src/assets/ee4ea542a72c5e7a3f16b26a997fb91b75b80ee6.png';
-const customerApp = '/src/assets/bbae5cdf871a3be0f5c3e6e3c21091b6bb6fa76a.png';
+import driverDashboardImg from '../assets/ee4ea542a72c5e7a3f16b26a997fb91b75b80ee6.png';
+import customerAppImg from '../assets/bbae5cdf871a3be0f5c3e6e3c21091b6bb6fa76a.png';
+
+const driverDashboard = driverDashboardImg;
+const customerApp = customerAppImg;
 
 export function DownloadSection() {
   return (

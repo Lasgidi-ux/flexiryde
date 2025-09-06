@@ -38,18 +38,47 @@ const navigationItems = [
 export default function LuxurySidebar({ isOpen, onToggle, activeSection, onSectionChange }: SidebarProps) {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [focusedItemIndex, setFocusedItemIndex] = useState<number>(0);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen) return;
+
+      switch (e.key) {
+        case 'Escape':
+          onToggle();
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          setFocusedItemIndex((prev) => (prev + 1) % navigationItems.length);
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          setFocusedItemIndex((prev) => (prev - 1 + navigationItems.length) % navigationItems.length);
+          break;
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          scrollToSection(navigationItems[focusedItemIndex].id);
+          onToggle();
+          break;
+      }
+    };
+
     if (isOpen) {
       window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('keydown', handleKeyDown);
     }
 
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [isOpen]);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, focusedItemIndex]);
 
   const scrollToSection = (sectionId: string) => {
     const targetId = sectionId === 'home' ? 'hero' : sectionId;
@@ -174,15 +203,19 @@ export default function LuxurySidebar({ isOpen, onToggle, activeSection, onSecti
                     onClick={() => scrollToSection(item.id)}
                     onMouseEnter={() => setHoveredItem(item.id)}
                     onMouseLeave={() => setHoveredItem(null)}
-                    className={`w-full group relative overflow-hidden rounded-3xl transition-all duration-700 hover:scale-[1.03] ${
+                    onFocus={() => setFocusedItemIndex(index)}
+                    className={`w-full group relative overflow-hidden rounded-3xl transition-all duration-700 hover:scale-[1.03] focus-visible-luxury ${
                       isActive 
                         ? 'bg-gradient-to-r from-yellow-400/20 via-orange-400/15 to-red-400/10 border-yellow-400/50 shadow-lg shadow-yellow-400/20' 
                         : 'hover:bg-gradient-to-r hover:from-blue-500/5 hover:via-purple-500/5 hover:to-cyan-500/5 border-transparent hover:border-cyan-400/30 hover:shadow-lg hover:shadow-cyan-400/10'
-                    } border-2 p-5 backdrop-blur-sm`}
+                    } ${focusedItemIndex === index ? 'ring-2 ring-[var(--color-flexiryde-gold)] ring-offset-2 ring-offset-black' : ''} border-2 p-5 backdrop-blur-sm`}
                     style={{
                       animationDelay: `${index * 0.1}s`,
                       transform: `translateX(${isHovered ? '4px' : '0px'})`
                     }}
+                    aria-label={`Navigate to ${item.label} section - ${item.description}`}
+                    aria-current={isActive ? 'page' : undefined}
+                    tabIndex={isOpen ? 0 : -1}
                   >
                     {/* Dynamic Glow Effect */}
                     <div className={`absolute inset-0 transition-all duration-500 ${

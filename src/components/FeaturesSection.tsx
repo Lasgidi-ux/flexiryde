@@ -28,14 +28,14 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 bg-[var(--color-charcoal)]">
+    <section className="py-24 bg-flexiryde-dark-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-serif mb-6">
-            <span className="text-white">Why Choose</span>{" "}
-            <span className="gold-text-gradient">FlexiRyde</span>
+            <span className="text-flexiryde-light">Why Choose</span>{" "}
+            <span className="flexiryde-gold-text-gradient">FlexiRyde</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-flexiryde-champagne max-w-3xl mx-auto">
             Experience the finest in luxury transportation with our premium features designed for discerning clients
           </p>
         </div>
@@ -44,15 +44,15 @@ export function FeaturesSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group glass-effect rounded-2xl p-8 hover:scale-105 transition-all duration-500 hover:border-[var(--color-gold-primary)]/30"
+              className="group flexiryde-glass rounded-2xl p-8 hover:scale-105 transition-all duration-500 hover:border-flexiryde-gold/30 luxury-hover-lift"
             >
-              <div className="w-16 h-16 gold-gradient rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-8 h-8 text-black" />
+              <div className="w-16 h-16 flexiryde-gold-gradient rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-gold-sm">
+                <feature.icon className="w-8 h-8 text-flexiryde-dark" />
               </div>
-              <h3 className="text-xl text-white mb-4 group-hover:text-[var(--color-gold-primary)] transition-colors duration-300">
+              <h3 className="text-xl text-flexiryde-light mb-4 group-hover:text-flexiryde-gold transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-flexiryde-champagne leading-relaxed">
                 {feature.description}
               </p>
             </div>

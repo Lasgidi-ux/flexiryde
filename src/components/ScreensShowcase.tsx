@@ -2,32 +2,37 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Smartphone, ArrowLeft, ArrowRight } from "lucide-react";
+import screen1 from "../assets/Booking screen1.PNG";
+import screen2 from "../assets/Booking screen 2.PNG";
+import screen3 from "../assets/Booking screen 3.PNG";
+import screen4 from "../assets/Booking screen 4.PNG";
+import screen5 from "../assets/Booking screen 5.PNG";
 
 const screens = [
   {
     title: "Welcome Screen",
     description: "Experience luxury at your fingertips",
-    image: "/src/assets/Booking screen1.PNG"
+    image: screen1
   },
   {
     title: "Booking Interface",
     description: "Effortless ride booking with premium selection",
-    image: "/src/assets/Booking screen 2.PNG"
+    image: screen2
   },
   {
     title: "Vehicle Selection",
     description: "Choose from our exclusive luxury fleet",
-    image: "/src/assets/Booking screen 3.PNG"
+    image: screen3
   },
   {
     title: "Ride Confirmation",
     description: "Confirm your premium journey details",
-    image: "/src/assets/Booking screen 4.PNG"
+    image: screen4
   },
   {
     title: "Journey Tracking",
     description: "Real-time luxury ride monitoring",
-    image: "/src/assets/Booking screen 5.PNG"
+    image: screen5
   }
 ];
 
