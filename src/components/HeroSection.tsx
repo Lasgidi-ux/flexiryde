@@ -81,7 +81,7 @@ export function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center container-responsive">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center container-responsive">
         {/* Floating UI Elements with Enhanced Glassmorphism */}
         <div className="absolute -top-20 -left-20 opacity-0 animate-slideInUp stagger-reveal" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
           <div className="luxury-card rounded-2xl p-4 floating-card animate-float3D shadow-gold-sm" style={{
@@ -166,11 +166,14 @@ export function HeroSection() {
 
         {/* Central Content */}
         <div className="max-w-5xl mx-auto">
-          {/* Premium Badge */}
-          <div className="inline-flex items-center space-x-2 flexiryde-glass rounded-full px-8 py-3 mb-8 opacity-0 animate-scaleIn magnetic-button" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <Crown className="w-5 h-5 text-flexiryde-gold" aria-hidden="true" />
-            <span className="text-flexiryde-light font-medium">Africa's Premier Luxury Transport</span>
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" aria-label="Live service indicator"></div>
+          {/* Premium Badge - Enhanced Luxury */}
+          <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-flexiryde-gold/10 via-flexiryde-champagne/5 to-flexiryde-gold/10 backdrop-blur-xl rounded-full px-10 py-4 mb-12 opacity-0 animate-scaleIn magnetic-button border border-flexiryde-gold/30 shadow-gold-lg" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <Crown className="w-6 h-6 text-flexiryde-gold animate-pulse" aria-hidden="true" />
+            <span className="text-flexiryde-light font-semibold text-lg tracking-wide">Africa's Premier Luxury Transport</span>
+            <div className="flex space-x-1">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" aria-label="Live service indicator"></div>
+              <div className="w-2 h-2 bg-flexiryde-gold rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} aria-hidden="true"></div>
+            </div>
           </div>
 
           {/* Main Headline with Enhanced Typography Hierarchy */}
@@ -212,22 +215,26 @@ export function HeroSection() {
           </div>
 
           {/* Interactive Description */}
-          <div className="max-w-3xl mx-auto mb-12 opacity-0 animate-slideInUp" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
-            <p className="text-luxury text-flexiryde-champagne leading-relaxed mb-6" style={{ fontSize: 'var(--text-xl)' }}>
+          <div className="max-w-4xl mx-auto mb-16 opacity-0 animate-slideInUp" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
+            <p className="text-luxury text-flexiryde-champagne leading-relaxed mb-8 px-4" style={{ fontSize: 'var(--text-xl)' }}>
               Experience transportation redefined. Where luxury meets innovation in Africa's most sophisticated ride-hailing platform.
             </p>
             
-            {/* Feature Pills */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8 stagger-reveal">
+            {/* Feature Pills - Enhanced Luxury */}
+            <div className="flex flex-wrap justify-center gap-6 mb-12 stagger-reveal">
               {featurePills.map((feature, index) => (
                 <div 
                   key={feature}
-                  className="flexiryde-glass rounded-full px-6 py-2 opacity-0 animate-scaleIn hover:scale-105 transition-all duration-300 cursor-pointer border border-flexiryde-gold/20 magnetic-button touch-target"
+                  className="group relative bg-gradient-to-r from-flexiryde-gold/15 via-flexiryde-champagne/10 to-flexiryde-gold/15 backdrop-blur-xl rounded-full px-8 py-4 opacity-0 animate-scaleIn hover:scale-110 transition-all duration-500 cursor-pointer border border-flexiryde-gold/30 magnetic-button touch-target shadow-gold-sm hover:shadow-gold-lg overflow-hidden"
                   style={{ animationDelay: `${1.4 + index * 0.1}s`, animationFillMode: 'forwards' }}
                   role="button"
                   tabIndex={0}
                 >
-                  <span className="text-flexiryde-champagne text-sm font-medium">{feature}</span>
+                  {/* Shimmer effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-flexiryde-gold/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  <span className="relative text-flexiryde-light text-base font-semibold tracking-wide">{feature}</span>
+                  {/* Corner accent */}
+                  <div className="absolute top-1 right-1 w-1.5 h-1.5 bg-flexiryde-gold/60 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>

@@ -5,22 +5,35 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "luc
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-br from-black via-flexiryde-dark to-black border-t border-flexiryde-gold/20 relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-flexiryde-gold/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-l from-flexiryde-champagne/15 to-transparent rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
         {/* Main Footer Content */}
-        <div className="py-16">
+        <div className="py-20">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="flex flex-col space-y-1">
-                  <img src="/Mini FlexiRyde Logo Design (1).svg" alt="FlexiRyde Logo" className="w-12 h-12 rounded-lg filter brightness-110 hover:brightness-125 transition-all duration-300" />
-                  <h2 className="text-2xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent">
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="relative">
+                  <img 
+                    src="/Mini FlexiRyde Logo Design (1).svg" 
+                    alt="FlexiRyde Logo" 
+                    className="w-16 h-16 rounded-xl filter brightness-110 hover:brightness-125 transition-all duration-300 shadow-gold-sm hover:shadow-gold-md" 
+                  />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[var(--color-flexiryde-gold)]/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <h2 className="text-3xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent leading-tight">
                     FlexiRyde
                   </h2>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
-                    <p className="text-xs text-[var(--color-flexiryde-gold-light)]/80 font-medium tracking-wider uppercase">Luxury Experience</p>
+                  <div className="flex items-center space-x-2 mt-2">
+                    <div className="w-12 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
+                    <p className="text-sm text-[var(--color-flexiryde-gold-light)]/80 font-medium tracking-wider uppercase">Luxury</p>
                   </div>
                 </div>
               </div>
