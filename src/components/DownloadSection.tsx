@@ -12,12 +12,24 @@ const customerApp = customerAppImg;
 
 export function DownloadSection() {
   return (
-    <section id="app" className="py-24 bg-black relative overflow-hidden">
-      {/* Luxury Background Elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-16 w-80 h-80 bg-gradient-to-br from-[var(--color-flexiryde-gold)] to-transparent rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-16 w-96 h-96 bg-gradient-to-tl from-[var(--color-flexiryde-gold)] to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '2.5s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-[var(--color-flexiryde-gold)]/20 to-transparent rounded-full blur-2xl animate-pulse" style={{animationDelay: '5s'}}></div>
+    <section id="app" className="py-32 bg-gradient-to-br from-black via-flexiryde-dark to-black relative overflow-hidden">
+      {/* Ultra-Premium Background Elements */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-20 left-16 w-[500px] h-[500px] bg-gradient-to-br from-[var(--color-flexiryde-gold)]/30 via-[var(--color-flexiryde-gold-light)]/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-16 w-[600px] h-[600px] bg-gradient-to-tl from-[var(--color-flexiryde-champagne)]/25 via-[var(--color-flexiryde-gold)]/15 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '2.5s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-[var(--color-flexiryde-gold)]/20 via-[var(--color-flexiryde-champagne)]/10 to-transparent rounded-full blur-2xl animate-pulse" style={{animationDelay: '5s'}}></div>
+        
+        {/* Additional luxury accents */}
+        <div className="absolute top-32 right-32 w-32 h-32 bg-gradient-to-br from-[var(--color-flexiryde-gold)]/20 to-transparent rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-32 left-32 w-40 h-40 bg-gradient-to-tr from-[var(--color-flexiryde-champagne)]/15 to-transparent rounded-full blur-xl animate-pulse" style={{animationDelay: '3s'}}></div>
+      </div>
+      
+      {/* Premium grid pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="w-full h-full" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(254, 216, 1, 0.15) 1px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 relative z-10">

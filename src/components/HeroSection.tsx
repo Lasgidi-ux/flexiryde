@@ -47,13 +47,25 @@ export function HeroSection() {
       aria-labelledby="hero-heading"
       role="banner"
     >
-      {/* Dynamic Background */}
+      {/* Ultra-Premium Dynamic Background */}
       <div className="absolute inset-0" aria-hidden="true">
-        {/* Gradient Mesh Background with FlexiRyde Colors */}
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent rounded-full blur-3xl animate-morphing liquid-morph"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-[var(--color-flexiryde-champagne)]/30 to-transparent rounded-full blur-3xl animate-morphing liquid-morph" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[var(--color-flexiryde-gold)]/10 to-transparent rounded-full blur-3xl"></div>
+        {/* Luxury Gradient Mesh Background */}
+        <div className="absolute inset-0 opacity-50">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-[var(--color-flexiryde-gold)]/40 via-[var(--color-flexiryde-gold-light)]/20 to-transparent rounded-full blur-3xl animate-morphing liquid-morph"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-l from-[var(--color-flexiryde-champagne)]/30 via-[var(--color-flexiryde-gold)]/15 to-transparent rounded-full blur-3xl animate-morphing liquid-morph" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[var(--color-flexiryde-gold)]/15 via-[var(--color-flexiryde-champagne)]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          
+          {/* Additional luxury layers */}
+          <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-[var(--color-flexiryde-gold)]/20 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-tr from-[var(--color-flexiryde-champagne)]/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        </div>
+        
+        {/* Luxury Grid Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="w-full h-full" style={{
+            backgroundImage: `linear-gradient(rgba(254, 216, 1, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(254, 216, 1, 0.1) 1px, transparent 1px)`,
+            backgroundSize: '100px 100px'
+          }}></div>
         </div>
 
         {/* Animated Particles with FlexiRyde Gold */}
@@ -278,17 +290,23 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* 3D App Preview Cards */}
-        <div className="relative mt-20 opacity-0 animate-scaleIn" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
-          <div className="flex justify-center items-center space-x-8">
-            {/* Main App Card */}
+        {/* Ultra-Premium 3D App Preview Cards */}
+        <div className="relative mt-24 opacity-0 animate-scaleIn" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
+          <div className="flex justify-center items-center space-x-12">
+            {/* Main App Card - Ultra Premium */}
             <div 
-              className="card-3d floating-card luxury-hover-lift"
+              className="card-3d floating-card luxury-hover-lift group"
               style={{
-                transform: `perspective(1000px) rotateY(${mousePosition.x * 0.1}deg) rotateX(${-mousePosition.y * 0.1}deg)`,
+                transform: `perspective(1200px) rotateY(${mousePosition.x * 0.1}deg) rotateX(${-mousePosition.y * 0.1}deg)`,
               }}
             >
-              <div className="w-72 h-[500px] flexiryde-glass rounded-3xl p-6 hover:scale-105 transition-all duration-700 flexiryde-luxury-shadow">
+              <div className="relative w-80 h-[550px] ultra-luxury-glass rounded-[2rem] p-8 hover:scale-105 transition-all duration-700 shadow-2xl border-2 border-flexiryde-gold/30 overflow-hidden">
+                {/* Premium glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-flexiryde-gold/10 via-transparent to-flexiryde-champagne/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem]"></div>
+                
+                {/* Luxury corner accents */}
+                <div className="absolute top-4 right-4 w-3 h-3 bg-flexiryde-gold/60 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-4 left-4 w-2 h-2 bg-flexiryde-champagne/60 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
                 <div className="w-full h-full bg-gradient-to-br from-flexiryde-dark-light to-flexiryde-dark rounded-2xl p-6 relative overflow-hidden">
                   {/* App Interface */}
                   <div className="text-center mb-6">
