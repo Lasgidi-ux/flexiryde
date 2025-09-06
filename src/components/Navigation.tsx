@@ -153,27 +153,34 @@ export default function Navigation({ onSidebarOpen }: NavigationProps = {}) {
             isScrolled ? 'h-16' : 'h-20'
           }`}>
             
-            {/* Enhanced Logo Section - Responsive */}
+            {/* Enhanced Logo Section - More Visible & Luxurious */}
             <button 
               onClick={() => scrollToSection('home')}
               className="flex items-center group transition-all duration-500 hover:scale-105 relative"
             >
-              <div className="flex items-center justify-between relative">
-                <div className="flex flex-col space-y-1">
-                  <img src="/Mini FlexiRyde Logo Design (1).svg" alt="FlexiRyde Logo" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg filter brightness-110 hover:brightness-125 transition-all duration-300" />
-                  <h1 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent">
+              <div className="flex items-center space-x-4 relative">
+                <div className="relative">
+                  <img 
+                    src="/Mini FlexiRyde Logo Design (1).svg" 
+                    alt="FlexiRyde Logo" 
+                    className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl filter brightness-110 hover:brightness-125 transition-all duration-300 shadow-gold-sm hover:shadow-gold-md" 
+                  />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[var(--color-flexiryde-gold)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[var(--color-flexiryde-gold)] via-[var(--color-flexiryde-gold-light)] to-[var(--color-flexiryde-gold)] bg-clip-text text-transparent leading-tight">
                     FlexiRyde
                   </h1>
-                  <div className="hidden sm:flex items-center space-x-2">
-                    <div className="w-6 sm:w-8 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
-                    <p className="text-xs text-[var(--color-flexiryde-gold-light)]/80 font-medium tracking-wider uppercase">Luxury Experience</p>
+                  <div className="flex items-center space-x-2 mt-1">
+                    <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent"></div>
+                    <p className="text-xs sm:text-sm text-[var(--color-flexiryde-gold-light)]/80 font-medium tracking-wider uppercase">Luxury</p>
                   </div>
                 </div>
               </div>
             </button>
 
-            {/* Enhanced Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-2 bg-[var(--color-flexiryde-dark)]/20 backdrop-blur-xl rounded-2xl px-6 py-3 border border-[var(--color-flexiryde-gold)]/10">
+            {/* Enhanced Desktop Navigation - More Luxurious */}
+            <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-black/30 via-flexiryde-dark-light/40 to-black/30 backdrop-blur-2xl rounded-3xl px-8 py-4 border border-flexiryde-gold/20 shadow-gold-sm">
               <NavLink href="#home">Home</NavLink>
               <NavLink href="#how-it-works">How It Works</NavLink>
               <NavLink href="#book-ride">Book a Ride</NavLink>

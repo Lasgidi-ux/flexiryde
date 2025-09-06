@@ -47,13 +47,25 @@ export function HeroSection() {
       aria-labelledby="hero-heading"
       role="banner"
     >
-      {/* Dynamic Background */}
+      {/* Ultra-Premium Dynamic Background */}
       <div className="absolute inset-0" aria-hidden="true">
-        {/* Gradient Mesh Background with FlexiRyde Colors */}
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[var(--color-flexiryde-gold)] to-transparent rounded-full blur-3xl animate-morphing liquid-morph"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-l from-[var(--color-flexiryde-champagne)]/30 to-transparent rounded-full blur-3xl animate-morphing liquid-morph" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[var(--color-flexiryde-gold)]/10 to-transparent rounded-full blur-3xl"></div>
+        {/* Luxury Gradient Mesh Background */}
+        <div className="absolute inset-0 opacity-50">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-[var(--color-flexiryde-gold)]/40 via-[var(--color-flexiryde-gold-light)]/20 to-transparent rounded-full blur-3xl animate-morphing liquid-morph"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-l from-[var(--color-flexiryde-champagne)]/30 via-[var(--color-flexiryde-gold)]/15 to-transparent rounded-full blur-3xl animate-morphing liquid-morph" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[var(--color-flexiryde-gold)]/15 via-[var(--color-flexiryde-champagne)]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          
+          {/* Additional luxury layers */}
+          <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-[var(--color-flexiryde-gold)]/20 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-tr from-[var(--color-flexiryde-champagne)]/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        </div>
+        
+        {/* Luxury Grid Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="w-full h-full" style={{
+            backgroundImage: `linear-gradient(rgba(254, 216, 1, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(254, 216, 1, 0.1) 1px, transparent 1px)`,
+            backgroundSize: '100px 100px'
+          }}></div>
         </div>
 
         {/* Animated Particles with FlexiRyde Gold */}
@@ -81,7 +93,7 @@ export function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center container-responsive">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center container-responsive">
         {/* Floating UI Elements with Enhanced Glassmorphism */}
         <div className="absolute -top-20 -left-20 opacity-0 animate-slideInUp stagger-reveal" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
           <div className="luxury-card rounded-2xl p-4 floating-card animate-float3D shadow-gold-sm" style={{
@@ -166,11 +178,14 @@ export function HeroSection() {
 
         {/* Central Content */}
         <div className="max-w-5xl mx-auto">
-          {/* Premium Badge */}
-          <div className="inline-flex items-center space-x-2 flexiryde-glass rounded-full px-8 py-3 mb-8 opacity-0 animate-scaleIn magnetic-button" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-            <Crown className="w-5 h-5 text-flexiryde-gold" aria-hidden="true" />
-            <span className="text-flexiryde-light font-medium">Africa's Premier Luxury Transport</span>
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" aria-label="Live service indicator"></div>
+          {/* Premium Badge - Enhanced Luxury */}
+          <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-flexiryde-gold/10 via-flexiryde-champagne/5 to-flexiryde-gold/10 backdrop-blur-xl rounded-full px-10 py-4 mb-12 opacity-0 animate-scaleIn magnetic-button border border-flexiryde-gold/30 shadow-gold-lg" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <Crown className="w-6 h-6 text-flexiryde-gold animate-pulse" aria-hidden="true" />
+            <span className="text-flexiryde-light font-semibold text-lg tracking-wide">Africa's Premier Luxury Transport</span>
+            <div className="flex space-x-1">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" aria-label="Live service indicator"></div>
+              <div className="w-2 h-2 bg-flexiryde-gold rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} aria-hidden="true"></div>
+            </div>
           </div>
 
           {/* Main Headline with Enhanced Typography Hierarchy */}
@@ -212,22 +227,26 @@ export function HeroSection() {
           </div>
 
           {/* Interactive Description */}
-          <div className="max-w-3xl mx-auto mb-12 opacity-0 animate-slideInUp" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
-            <p className="text-luxury text-flexiryde-champagne leading-relaxed mb-6" style={{ fontSize: 'var(--text-xl)' }}>
+          <div className="max-w-4xl mx-auto mb-16 opacity-0 animate-slideInUp" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
+            <p className="text-luxury text-flexiryde-champagne leading-relaxed mb-8 px-4" style={{ fontSize: 'var(--text-xl)' }}>
               Experience transportation redefined. Where luxury meets innovation in Africa's most sophisticated ride-hailing platform.
             </p>
             
-            {/* Feature Pills */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8 stagger-reveal">
+            {/* Feature Pills - Enhanced Luxury */}
+            <div className="flex flex-wrap justify-center gap-6 mb-12 stagger-reveal">
               {featurePills.map((feature, index) => (
                 <div 
                   key={feature}
-                  className="flexiryde-glass rounded-full px-6 py-2 opacity-0 animate-scaleIn hover:scale-105 transition-all duration-300 cursor-pointer border border-flexiryde-gold/20 magnetic-button touch-target"
+                  className="group relative bg-gradient-to-r from-flexiryde-gold/15 via-flexiryde-champagne/10 to-flexiryde-gold/15 backdrop-blur-xl rounded-full px-8 py-4 opacity-0 animate-scaleIn hover:scale-110 transition-all duration-500 cursor-pointer border border-flexiryde-gold/30 magnetic-button touch-target shadow-gold-sm hover:shadow-gold-lg overflow-hidden"
                   style={{ animationDelay: `${1.4 + index * 0.1}s`, animationFillMode: 'forwards' }}
                   role="button"
                   tabIndex={0}
                 >
-                  <span className="text-flexiryde-champagne text-sm font-medium">{feature}</span>
+                  {/* Shimmer effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-flexiryde-gold/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  <span className="relative text-flexiryde-light text-base font-semibold tracking-wide">{feature}</span>
+                  {/* Corner accent */}
+                  <div className="absolute top-1 right-1 w-1.5 h-1.5 bg-flexiryde-gold/60 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>
@@ -271,17 +290,23 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* 3D App Preview Cards */}
-        <div className="relative mt-20 opacity-0 animate-scaleIn" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
-          <div className="flex justify-center items-center space-x-8">
-            {/* Main App Card */}
+        {/* Ultra-Premium 3D App Preview Cards */}
+        <div className="relative mt-24 opacity-0 animate-scaleIn" style={{ animationDelay: '2s', animationFillMode: 'forwards' }}>
+          <div className="flex justify-center items-center space-x-12">
+            {/* Main App Card - Ultra Premium */}
             <div 
-              className="card-3d floating-card luxury-hover-lift"
+              className="card-3d floating-card luxury-hover-lift group"
               style={{
-                transform: `perspective(1000px) rotateY(${mousePosition.x * 0.1}deg) rotateX(${-mousePosition.y * 0.1}deg)`,
+                transform: `perspective(1200px) rotateY(${mousePosition.x * 0.1}deg) rotateX(${-mousePosition.y * 0.1}deg)`,
               }}
             >
-              <div className="w-72 h-[500px] flexiryde-glass rounded-3xl p-6 hover:scale-105 transition-all duration-700 flexiryde-luxury-shadow">
+              <div className="relative w-80 h-[550px] ultra-luxury-glass rounded-[2rem] p-8 hover:scale-105 transition-all duration-700 shadow-2xl border-2 border-flexiryde-gold/30 overflow-hidden">
+                {/* Premium glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-flexiryde-gold/10 via-transparent to-flexiryde-champagne/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem]"></div>
+                
+                {/* Luxury corner accents */}
+                <div className="absolute top-4 right-4 w-3 h-3 bg-flexiryde-gold/60 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-4 left-4 w-2 h-2 bg-flexiryde-champagne/60 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
                 <div className="w-full h-full bg-gradient-to-br from-flexiryde-dark-light to-flexiryde-dark rounded-2xl p-6 relative overflow-hidden">
                   {/* App Interface */}
                   <div className="text-center mb-6">

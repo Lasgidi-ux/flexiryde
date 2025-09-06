@@ -35,9 +35,9 @@ app.use(express.urlencoded({ extended: true }));
 // Zoho Mail SMTP Configuration
 const createTransporter = () => {
   return nodemailer.createTransporter({
-    host: 'smtp.zoho.com',
-    port: 587,
-    secure: false,
+    host: process.env.ZOHO_SMTP || 'smtp.zoho.com',
+    port: parseInt(process.env.ZOHO_PORT) || 465,
+    secure: process.env.ZOHO_SECURE === 'true',
     auth: {
       user: process.env.ZOHO_EMAIL,
       pass: process.env.ZOHO_PASSWORD,

@@ -30,26 +30,41 @@ export function ContactSection() {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus("success");
+    try {
+      // Send form data to backend
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
       
-      // Reset form after successful submission
-      setTimeout(() => {
-        setFormState({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-        setSubmitStatus("idle");
-      }, 3000);
-    }, 1500);
+      if (response.ok) {
+        setSubmitStatus("success");
+        // Reset form after successful submission
+        setTimeout(() => {
+          setFormState({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+          setSubmitStatus("idle");
+        }, 3000);
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
